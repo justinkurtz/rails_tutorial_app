@@ -3,7 +3,20 @@
 }
 
 body {
-	background: #cff;
+	color: #000;
+	height: 400px;
+	padding: 10px;
+	
+	/* For WebKit (Safari, Google Chrome etc) */
+	background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#499731));
+	/* For Mozilla/Gecko (Firefox etc) */
+	background: -moz-linear-gradient(top, #fff, #499731);
+	/* For Internet Explorer 5.5 - 7 */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#fff, endColorstr=#499731);
+	/* For Internet Explorer 8 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#fff, endColorstr=#499731)";
+	background-repeat: no-repeat;
+	background-color: #499731;
 }
 
 header {
@@ -12,6 +25,7 @@ header {
 
 header img {
 	padding: 1em;
+	display: block;
 	background: #fff;
 }
 
@@ -49,7 +63,7 @@ nav {
 
 nav {
 	background-color: white;
-	padding: 0 0.7em;
+	padding: 0 1.7em;
 	white-space: nowrap;
 }
 
@@ -103,6 +117,29 @@ footer {
 	margin-left: auto;
 	margin-right: auto;
 }
+
 footer nav {
 	float: none;
+}
+
+table.profile {
+	width: 100%;
+	margin-bottom: 0;
+}
+
+td.main {
+	width: 70%;
+	padding: 1em;
+}
+
+td.sidebar {
+	width: 30%;
+	padding: 1em;
+	vertical-align: top;
+	background: #ffc;
+}
+
+.profile img.gravatar {
+	border: 1px solid #999;
+	margin-bottom: -15px;
 }
