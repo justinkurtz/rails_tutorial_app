@@ -2,13 +2,14 @@
 	<tr>
 		<td class="main">
 			<h1>
-				<%= gravatar_for @user %>
+				<%= gravatar_for @user, :size => 100 %>
 				<%= @user.name %>
 			</h1>
 		</td>
 		<td class="sidebar round">
 			<strong>Name</strong> <%= @user.name %><br />
-			<strong>URL</strong> <%= link_to user_path(@user), @user %>
+			<strong>URL</strong> <%= link_to user_path(@user), @user %><br />
+			<strong>Admin</strong> <%= @user.admin? ? "yes" : "no" %>
 		</td>
 	</tr>
 </table>
