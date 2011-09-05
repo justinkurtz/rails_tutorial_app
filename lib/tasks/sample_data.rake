@@ -6,7 +6,7 @@ namespace :db do
                  :password => "neiklot",
                  :password_confirmation => "neiklot")
     admin.toggle!(:admin)
-    require 'faker', '0.9.5'
+    require 'faker'
     Rake::Task['db:reset'].invoke
     99.times do |n|
       name = Faker::Name.name
