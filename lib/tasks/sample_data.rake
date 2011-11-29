@@ -3,8 +3,8 @@ namespace :db do
   task :populate => :environment do
     admin = User.create!(:name => "Justin Kurtz",
                  :email => "kurtz.justin@gmail.com",
-                 :password => "neiklot",
-                 :password_confirmation => "neiklot")
+                 :password => "pass",
+                 :password_confirmation => "pass")
     admin.toggle!(:admin)
     require 'faker'
     Rake::Task['db:reset'].invoke
