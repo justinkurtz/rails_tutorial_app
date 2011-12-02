@@ -16,7 +16,10 @@ test:
   timeout: 5000
 
 production:
-  adapter: sqlite3
-  database: db/production.sqlite3
-  pool: 5
-  timeout: 5000
+  adapter: postgresql
+  database: irk89_production
+  username: irk89-app
+  password: BlM2Nb2Mvj
+  host: localhost
+  port: 5432
+
