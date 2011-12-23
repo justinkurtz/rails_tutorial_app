@@ -2,6 +2,7 @@ class User < ActiveRecord::Base
   attr_accessor :password
   attr_accessible :name, :email, :password, :password_confirmation
   
+  has_many :microposts, :dependent => :destroy
   
   email_regex = %r{
      ^ # Start of string
@@ -44,6 +45,11 @@ class User < ActiveRecord::Base
     user = find_by_id(id)
     (user && user.salt == cookie_salt) ? user : nil
   end
+  
+  def feed
+    Micropost.where("user_id = ?", id);
+  end
+  
   private
     def encrypt_password
       self.salt = make_salt if new_record?

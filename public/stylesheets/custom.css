@@ -8,15 +8,15 @@ body {
 	padding: 10px;
 	
 	/* For WebKit (Safari, Google Chrome etc) */
-	background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#499731));
+	background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ddd));
 	/* For Mozilla/Gecko (Firefox etc) */
-	background: -moz-linear-gradient(top, #fff, #499731);
+	background: -moz-linear-gradient(top, #fff, #ddd);
 	/* For Internet Explorer 5.5 - 7 */
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#fff, endColorstr=#499731);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#fff, endColorstr=#ddd);
 	/* For Internet Explorer 8 */
-	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#fff, endColorstr=#499731)";
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#fff, endColorstr=#ddd)";
 	background-repeat: no-repeat;
-	background-color: #499731;
+	background-color: #ddd;
 }
 
 header {
@@ -195,4 +195,59 @@ ul.users {
 
 .users li {
 	list-style: none;
+}
+
+h1.micropost {
+	margin-bottom: 0.3em;
+}
+
+table.microposts {
+	margin-top: 1em;
+}
+
+table.microposts tr {
+	height: 70px;
+}
+
+table.microposts tr td.gravatar {
+	border-top: 1px solid #ccc;
+	vertical-align: top;
+	width: 50px;
+}
+
+table.microposts tr td.micropost {
+	border-top: 1px solid #ccc;
+	vertical-align: top;
+	min-width: 50px;
+}
+
+table.microposts tr td.micropost span.timestamp {
+	display: block;
+	font-size: 85%;
+	color: #666;
+}
+
+div.user_info img {
+	padding-right: 0.1em;
+}
+
+div.user_info a {
+	padding-right: 0.1em;
+}
+
+div.user_info span.user_name {
+	position: absolute;
+}
+
+div.user_info span.microposts {
+	pont-size: 80%;
+}
+
+form.new_micropost {
+	margin-bottom: 2em;
+}
+
+form.new_micropost textarea {
+	height: 4em;
+	margin-bottom: 0;
 }
