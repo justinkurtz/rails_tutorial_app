@@ -14,3 +14,4 @@ end
 desc "Prepare for CI and run entire test suite"
 task :build => ['ci:copy_yml', 'db:create', 'db:migrate', 'ci:spec'] do
 end
+end
