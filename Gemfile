@@ -14,6 +14,7 @@ group :development do
 end
 
 group :test do
+  gem 'rspec-core'
 	gem 'rspec-rails', '2.6.1' 
 	gem 'webrat', '0.7.1'
 	#gem 'autotest', '4.4.6'
